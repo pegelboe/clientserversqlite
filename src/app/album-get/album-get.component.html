@@ -1,0 +1,22 @@
+<h1>Album(s)</h1>
+
+Error: {{error}}
+<p></p>
+
+<div *ngIf="album != undefined">
+  <h3>Greatest Album ever found in DB:</h3>
+  {{album.Title}} - {{album.Name}}
+</div>
+
+<p></p>
+
+<h3>Artist album search in DB:</h3>
+<input type="text" [(ngModel)]="artistName" >
+<button (click)="requestAlbums()">get Albums from Artist</button>
+
+<div *ngIf="albumList != undefined">
+  <b>AlbumTitle - ArtistName ({{albumList.length}})</b>
+  <div *ngFor="let alb of albumList">
+    {{alb.getAll()}}
+  </div>
+</div>

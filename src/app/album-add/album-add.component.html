@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-body">
+    <div>
+      <label class="col-md-4">Artist Name</label>
+      <input type="text" value="Queen" #ArtistName />
+    </div>
+    <div>
+      <label class="col-md-4">Album title </label>
+      <input type="text" value="TEST" #AlbumTitle />
+    </div>
+    <div>
+      <button (click)="addProduct(ArtistName.value, AlbumTitle.value)" >
+        Add album
+      </button>
+
+      <div *ngIf="resultMessage != undefined">{{resultMessage}}</div>
+    </div>
+  </div>
+</div>
+
