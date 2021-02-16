@@ -14,12 +14,11 @@ export class AlbumAddComponent implements OnInit {
   constructor(private albumService: AlbumService) {
   }
 
-  addProduct(ArtistName: string, AlbumTitle: string) {
+  addAlbum(ArtistName: string, AlbumTitle: string) {
     this.resultMessage = undefined;
     let album: Album = new Album();
     album.ArtistName = ArtistName;
     album.Title = AlbumTitle;
-
 
     this.albumService.addAlbum(album, 
       suc => {
